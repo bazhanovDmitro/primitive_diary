@@ -6,6 +6,7 @@ export default function Switcher({ style, buttons, visible, activeButton }) {
       <div className={style ? style.switcher : s.switcher}>
         {buttons.map((button) => (
           <button
+            key={button.text}
             className={activeButton === button.text ? s.active : s.button}
             onClick={button.onClick}
           >

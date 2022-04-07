@@ -1,0 +1,22 @@
+@mixin commonList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 60px;
+  max-width: 1440px;
+}
+
+@media screen and (min-width: 1400px) {
+  .list {
+    @include commonList();
+  } 
+}
+
+@media screen and (max-width: 1399px) {
+  .list {
+    @include commonList();
+    flex-direction: column;
+  }
+}
