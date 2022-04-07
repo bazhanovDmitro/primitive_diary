@@ -1,0 +1,40 @@
+@import "../../consts/colors.module.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  .header {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .textarea {
+    height: 150px;
+    padding: 5px;
+    resize: none;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: $MOBILE_CONTAINER_WIDTH;
+    .header {
+      font-size: $MOBILE_FONT_INPUT_HEADER;
+    }
+    .textarea {
+      font-size: $MOBILE_FONT_SIZE;
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .form {
+    width: $DESCTOP_CONTAINER_WIDTH;
+    .header {
+      font-size: $MOBILE_FONT_INPUT_HEADER;
+    }
+    .textarea {
+      font-size: $DESCTOP_FONT_SIZE;
+    }
+  }
+}
