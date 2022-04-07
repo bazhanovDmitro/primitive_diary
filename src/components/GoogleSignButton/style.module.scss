@@ -1,0 +1,30 @@
+@import "../../consts/colors.module.scss";
+
+.button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: $GOOGLE_RED;
+  color: $WHITE;
+  border: none;
+  height: 40px;
+  width: 280px;
+  cursor: pointer;
+
+  &:active {
+    background-color: $GOOGLE_ACTIVE_RED;
+  }
+
+  &:disabled {
+    opacity: 0.65;
+  }
+
+  .g {
+    padding-right: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 900;
+    border-right: 1px solid $GRAY;
+  }
+}
