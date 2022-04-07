@@ -3,6 +3,8 @@ import { doc, setDoc } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 
 export const CreateArticle = async (header, text) => {
+  const dateTime = new Date();
+
   const userID = auth.currentUser.uid;
   const id = uuidv4();
   const articleRef = doc(db, `articles`, id);
@@ -11,5 +13,6 @@ export const CreateArticle = async (header, text) => {
     user: userID,
     header: header,
     text: text,
+    time: dateTime.getTime(),
   });
 };
