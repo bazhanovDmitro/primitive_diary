@@ -8,7 +8,11 @@ export default function List({ style }) {
   return (
     <div className={style ? style.list : s.list}>
       {articles.map((article) => (
-        <ListItem key={article.id} header={article.header} />
+        <ListItem
+          key={article.id}
+          header={article.header}
+          date={article.time}
+        />
       ))}
     </div>
   );

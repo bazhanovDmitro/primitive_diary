@@ -5,7 +5,7 @@
   display: flex;
   font-weight: normal;
   color: $DARK_GRAY;
-  box-shadow: 0px 0px 5px $DARK_BLACK;
+  box-shadow: 0px 0px 5px $DARK_BLACK_LOW_OPACITY;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
@@ -21,7 +21,7 @@
     width: 350px;
     .header {
       @include commonHeader();
-      font-size: 24px;
+      font-size: $SMALL_MOBILE_FONT_H1;
     }
   }
 }
@@ -31,7 +31,39 @@
     width: 600px;
     .header {
       @include commonHeader();
-      font-size: 24px;
+      font-size: $MOBILE_FONT_H1;
     }
+  }
+}
+
+.item {
+  position: relative;
+  height: 57px;
+  transition: 1s;
+  &:hover {
+    margin-top: 25px;
+    .hint {
+      position: absolute;
+      display: flex;
+      width: fit-content;
+      opacity: 1;
+      padding: 5px;
+      font-size: $SMALL_MOBILE_FONT_H1;
+      background-color: $GRAY;
+      transform: scaleY(1);
+    }
+  }
+  .hint {
+    position: absolute;
+    top: -40px;
+    display: flex;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    width: fit-content;
+    padding: 5px;
+    transition: 1s;
+    font-size: $SMALL_MOBILE_FONT_H1;
+    color: $DARK_BLACK;
+    background-color: $GRAY;
   }
 }
