@@ -11,9 +11,29 @@
   }
 }
 
+@media screen and (min-width: 1400px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1399px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
 
 .header {
   text-align: center;
   font-weight: $FONT_WEIGHT;
-  margin-bottom: 30px;
 }
