@@ -1,0 +1,10 @@
+@import "../../consts/colors.module.scss";
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 15px 0;
+  border: solid $GRAY 1px;
+}
