@@ -1,13 +1,14 @@
 import Card from "../../components/Card";
+import ContentHolder from "../../components/ContentHolder";
 import GoogleSignIn from "../../components/GoogleSignButton";
 import style from "./signIn.module.scss";
 
 export default function SignIn() {
   return (
-    <div>
+    <ContentHolder>
       <Card style={style}>
         <GoogleSignIn />
       </Card>
-    </div>
+    </ContentHolder>
   );
 }
