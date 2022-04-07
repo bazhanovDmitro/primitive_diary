@@ -6,12 +6,40 @@
   .header {
     padding: 5px;
     margin-bottom: 20px;
+
+    &:disabled {
+      opacity: 0.65;
+    }
   }
   .textarea {
     height: 150px;
     padding: 5px;
     resize: none;
     white-space: pre-wrap;
+
+    &:disabled {
+      opacity: 0.65;
+    }
+  }
+
+  .submit {
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: $GOOGLE_BLUE;
+    color: $WHITE;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+      background-color: $GOOGLE_ACTIVE_BLUE;
+    }
+
+    &:disabled {
+      opacity: 0.65;
+    }
   }
 }
 
