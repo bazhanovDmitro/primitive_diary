@@ -5,6 +5,7 @@ import CreateArticle from "./pages/CreateArticle/CreateArticle";
 import Diary from "./pages/Diary/index";
 import List from "./pages/Diary/List";
 import { useState, createContext } from "react";
+import Article from "./pages/Article";
 
 export const Context = createContext();
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/createArticle" element={<CreateArticle />} />
           <Route path="/diary" element={<Diary />}>
             <Route path="" element={<List />} />
+            <Route path=":articleID" element={<Article />} />
           </Route>
         </Route>
       </Routes>

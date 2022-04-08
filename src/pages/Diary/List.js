@@ -16,6 +16,7 @@ export default function List({ style }) {
           return (
             <ListItem
               key={article.id}
+              id={article.id}
               header={article.header}
               date={article.time}
             />
@@ -24,6 +25,7 @@ export default function List({ style }) {
           return (
             <ListCard
               key={article.id}
+              id={article.id}
               text={article.text}
               header={article.header}
               date={article.time}

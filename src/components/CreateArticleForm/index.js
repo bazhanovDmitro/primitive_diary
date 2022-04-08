@@ -12,7 +12,7 @@ export default function CreateArticleForm() {
     event.preventDefault();
     setProgress(true);
     CreateArticle(event.target[0].value, event.target[1].value)
-      .then(() => navigate(`/articles`))
+      .then(() => navigate(`/diary`))
       .finally(() => setProgress(false));
   };
 

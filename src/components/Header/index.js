@@ -27,6 +27,8 @@ export default function Header() {
   useEffect(() => {
     if (pathname === `/diary`) {
       setVisible(true);
+    } else {
+      setVisible(false);
     }
   }, [pathname]);
 

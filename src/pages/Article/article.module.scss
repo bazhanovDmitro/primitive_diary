@@ -1,0 +1,50 @@
+@import "../../consts/colors.module.scss";
+
+.timestamp {
+  background-color: $GRAY;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  box-shadow: 0px 0px 5px $DARK_BLACK_LOW_OPACITY;
+  color: $DARK_GRAY;
+  height: 80vh;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+  padding: 10px;
+  .header {
+    font-size: $SMALL_MOBILE_FONT_H1;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .text {
+    font-size: $MOBILE_FONT_SIZE;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .timestamp {
+    font-size: $MOBILE_FONT_SIZE;
+  }
+  .article {
+    width: $MOBILE_CONTAINER_WIDTH;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .timestamp {
+    font-size: $SMALL_MOBILE_FONT_H1;
+  }
+  .article {
+    width: $DESCTOP_CONTAINER_WIDTH;
+  }
+}

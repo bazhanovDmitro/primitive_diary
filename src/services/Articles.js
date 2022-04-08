@@ -7,6 +7,7 @@ import {
   query,
   orderBy,
   where,
+  getDoc,
 } from "firebase/firestore";
 import { v4 as uuidv4 } from "uuid";
 
@@ -36,4 +37,10 @@ export const LoadArticles = async (user) => {
   return response.docs.map((article) => {
     return { ...article.data(), id: article.id };
   });
+};
+
+export const LoadArticle = async (id) => {
+  const articleRef = doc(db, `articles`, id);
+  const article = await getDoc(articleRef);
+  return article.data();
 };
