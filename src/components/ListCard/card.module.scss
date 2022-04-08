@@ -1,0 +1,65 @@
+@import "../../consts/colors.module.scss";
+
+.card {
+  position: relative;
+  box-shadow: 0px 0px 5px $DARK_BLACK_LOW_OPACITY;
+  padding: {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 25px;
+  };
+  height: 230px;
+  overflow: scroll;
+  cursor: pointer;
+  .time {
+    position: absolute;
+    top: 10px;
+    color: $DARK_BLACK;
+  }
+  .header {
+    text-align: center;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $DARK_GRAY;
+    font-weight: normal;
+  }
+  .text {
+    color: $DARK_GRAY;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: $MOBILE_CONTAINER_WIDTH;
+    .time {
+      font-size: $MOBILE_FONT_SIZE;
+    }
+    .header {
+      font-size: $SMALL_MOBILE_FONT_H1;
+    }
+    .text {
+      font-size: $MOBILE_FONT_SIZE;
+    }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .card {
+    width: $DESCTOP_CONTAINER_WIDTH;
+    .time {
+      font-size: $DESCTOP_FONT_SIZE;
+    }
+    .header {
+      font-size: $MOBILE_FONT_H1;
+    }
+    .text {
+      font-size: $DESCTOP_FONT_SIZE;
+    }
+  }
+}

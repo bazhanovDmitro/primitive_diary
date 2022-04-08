@@ -4,10 +4,15 @@ import Header from "./components/Header/index";
 import CreateArticle from "./pages/CreateArticle/CreateArticle";
 import Diary from "./pages/Diary/index";
 import List from "./pages/Diary/List";
+import { useState, createContext } from "react";
+
+export const Context = createContext();
 
 function App() {
+  const [mode, setMode] = useState(`List`);
+
   return (
-    <>
+    <Context.Provider value={{ value: mode, setValue: setMode }}>
       <Header />
       <Routes>
         <Route path="" element={<Outlet />}>
@@ -18,7 +23,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
-    </>
+    </Context.Provider>
   );
 }
 

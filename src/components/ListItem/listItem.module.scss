@@ -32,11 +32,15 @@
     .header {
       @include commonHeader();
       font-size: $MOBILE_FONT_H1;
+      width: 600px;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 }
 
 .item {
+
   position: relative;
   height: 57px;
   transition: margin 1s;
@@ -65,5 +69,12 @@
     font-size: $SMALL_MOBILE_FONT_H1;
     color: $DARK_BLACK;
     background-color: $GRAY;
+  }
+  .header {
+    text-align: center;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }

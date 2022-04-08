@@ -1,14 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { auth } from "../../firebase";
 import style from "./style.module.scss";
 import Loader from "../Loader/index";
 import { useLocation } from "react-router-dom";
 import Switcher from "../Switcher";
+import { Context } from "../../App";
 
 export default function Header() {
+  const mode = useContext(Context);
+
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(true);
-  const [mode, setMode] = useState(`List`);
+  // const [mode, setMode] = useState(`List`);
   const [buttonsVisible, setVisible] = useState(false);
 
   const { pathname } = useLocation();
@@ -36,10 +39,10 @@ export default function Header() {
         </h1>
         <Switcher
           visible={buttonsVisible}
-          activeButton={mode}
+          activeButton={mode.value}
           buttons={[
-            { text: "List", onClick: () => setMode(`List`) },
-            { text: "Cards", onClick: () => setMode(`Cards`) },
+            { text: "List", onClick: () => mode.setValue(`List`) },
+            { text: "Cards", onClick: () => mode.setValue(`Cards`) },
           ]}
         />
       </div>
